@@ -5,6 +5,7 @@
  */
  
 #include "charybdis.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
 	col-offset = <6>;
@@ -67,7 +68,12 @@
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-
+    /* SNIPE: работает, когда активен слой 7 */
+    snipe {
+      layers = <7>;
+      input-processors = <&zip_xy_scaler 1 3>;
+    }
   };
 };
+
 
