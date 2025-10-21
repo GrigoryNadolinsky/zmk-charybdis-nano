@@ -5,7 +5,7 @@
  */
  
 #include "charybdis.dtsi"
-#include <input/processors.dtsi>
+#include <zmk/input/processors.dtsi>
 
 &default_transform {
 	col-offset = <6>;
@@ -75,5 +75,6 @@
     }
   };
 };
+
 
 
